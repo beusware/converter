@@ -1,0 +1,35 @@
+{
+  "name": "converter",
+  "description": "A software to download songs from YouTube and convert audio files",
+  "author": "David Penkowoj",
+  "license": "BSD-2-Clause",
+  "version": "1.0.0",
+  "main": "./build/app.js",
+  "scripts": {
+    "start": "node ./build/app.js",
+    "build": "tsc ./src/app.ts --outDir build/ && nexe build/",
+    "test": "tsc ./src/app.ts --outDir build/ && nodemon ./build/app.js"
+  },
+  "bin": "./build/app.js",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^4.9.1",
+    "ytpl": "^2.2.3",
+    "ytsr": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.18",
+    "@types/node": "^16.11.6",
+    "nexe": "^4.0.0-beta.19",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beusware/converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beusware/converter/issues"
+  },
+  "homepage": "https://github.com/beusware/converter#readme"
+}
