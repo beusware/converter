@@ -1,5 +1,7 @@
 import { videoInfo } from "ytdl-core";
-import * as path from "path";
+
+const windowsPath = "C:/Users/FORUM II/Music/";
+const linuxPath = "/tmp/";
 
 export class Song {
   url: string;
@@ -14,7 +16,7 @@ export class Song {
 
   _getSavePathFromInfo() {
     let safeTitle: string = this.info.videoDetails.title.replace(/[\\\/:"*?<>| ]+/gu, "_");
-    let directory = process.platform == "win32" ? path.join(process.env.HOME, "../../Music/") : "/tmp/";
+    let directory = process.platform == "win32" ? windowsPath : linuxPath;
 
     return `${directory}${safeTitle}.wav`;
   }

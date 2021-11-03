@@ -7,8 +7,8 @@
   "main": "./build/app.js",
   "scripts": {
     "start": "node ./build/app.js",
-    "build": "tsc ./src/app.ts --outDir build/ && nexe build/",
-    "test": "tsc ./src/app.ts --outDir build/ && nodemon ./build/app.js"
+    "test": "tsc ./src/app.ts --outDir build/ && nodemon ./build/app.js",
+    "build": "tsc ./src/app.ts --outDir build/ && nexe build/ -o build/downloader.exe -t windows-x64-14.5.0 && nexe build/ -o build/downloader.bin -t linux-x64-14.15.3"
   },
   "bin": "./build/app.js",
   "dependencies": {
